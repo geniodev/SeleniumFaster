@@ -1,20 +1,6 @@
 
-#Importações de Uso Frequente
-from selenium.webdriver.support.ui import WebDriverWait
-
-from selenium.webdriver.support.expected_conditions import visibility_of_element_located, invisibility_of_element_located        #Unico Elemento
-from selenium.webdriver.support.expected_conditions import visibility_of_all_elements_located   #Todos Elementos
-
-from selenium.webdriver.common.by import By
-
-#--------------------------------------------------------------------------------------   CHROME
-
-
-#Usando o navegador Padrão do seu computador = erros se não for compativel
-
-
-
-def BaixarImagem(Find, NomePng="captchaSimples.png"):
+#Passe o objeto do find(objeto já pesquisado no selenium), depois passe o nome do arquivo a ser gravado
+def BaixarImagem(Find, NomePng="imagem.png"):
     with open(NomePng, 'wb') as file:
         #Exemplo
         #file.write(driver.find_element_by_css_selector("img#captcha-img").screenshot_as_png)
@@ -138,7 +124,7 @@ def Navegador( Navegador="chrome", Maximizar=True, Visivel=True, EsperaImplicita
 
 
 #Requisições Web - Construir
-def Requisicao(Driver, Site="", Metodo="get", Return_Url=False, TempoCarregamento=0, Return_Html=False, Return_Title=False ):
+def Requisicao(Driver, Site="", Return_Url=False, TempoCarregamento=0, Return_Html=False, Return_Title=False ):
     if ( TempoCarregamento > 0):
         # Espera o tempo em segundos para carregar a página e levantar um error.
         Driver.set_page_load_timeout(TempoCarregamento)
@@ -162,7 +148,7 @@ def Requisicao(Driver, Site="", Metodo="get", Return_Url=False, TempoCarregament
 
 #Testar Temporizador Espera...
 #Procura Elementos, atualmente somente selenium
-def Find(Driver, FindParams= "id",  Find="", TempoMaxEspera=0, All=False, TestFind=False):
+def Find(Driver, FindParams= "id",  Find="", TempoMaxEspera=0, All=False):
     
     if isinstance(FindParams, int):
         ListParams = ["id", "name", "xpath", "class_name", "css_selector", "link_text",  "partial_link_text"]
@@ -206,7 +192,7 @@ def Find(Driver, FindParams= "id",  Find="", TempoMaxEspera=0, All=False, TestFi
 
 
 #Procura Elementos, atualmente somente selenium
-def FindOperation(Driver, FindParams= "id",  Find="", All=False, TestFind=False, Click=False, LimparCampo=False, Digitar=False):
+def FindOperation(Driver, FindParams= "id",  Find="", All=False, Click=False, LimparCampo=False, Digitar=False):
     
     if isinstance(FindParams, int):
         ListParams = ["id", "name", "xpath", "class_name", "css_selector", "link_text",  "partial_link_text"]
@@ -343,8 +329,8 @@ class EsperarDesaparecerElemento():
     driver = Navegador()
     driver.get(r"https://servicos.ibama.gov.br/sicafiext/sistema.php")
     
-    Espera = EsperarAparecerElemento(driver=driver)
-    Espera1 = Espera.find(Condicao="id", ElementoEsperar="lnk1", TempoMaxEspera=30)
+    Desaparecer = EsperarDesaparecerElemento(driver=driver)
+    Desaparecer1 = Desaparecer.find(Condicao="id", ElementoEsperar="lnk1", TempoMaxEspera=30)
     """
     
     def find(self, driver, Condicao="id", ElementoEsperar="", TempoMaxEspera=30):
