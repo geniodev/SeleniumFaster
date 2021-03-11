@@ -321,9 +321,9 @@ def __DeixarUnico__(RodarTudo):
 
 
 
-def Principal(Arquivo=None, HtmlSoup=None, HtmlTxt=None):
+def Principal(Arquivo=None, HtmlTxt=None):
     
-    if (Arquivo == None and HtmlSoup == None and HtmlTxt == None) :
+    if (Arquivo == None and HtmlTxt == None) :
         return None
     
     #Tipo Arquivo
