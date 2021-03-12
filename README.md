@@ -36,8 +36,8 @@
 <h1 id="install">Bibliotecas Instalar</h1></br>
 
 ```bash
-pip install *
-pip install *
+pip install selenium
+pip install webdriver-manager
 ```
 
 
