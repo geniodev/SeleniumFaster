@@ -102,7 +102,7 @@ Digitar: Padrão(False)."True" > Envia um texto digitado semelhante a um teclado 
 Espera o elemento estar presente na pagina html.</br>
 Condicao: Padrão(id). Parametros de buscas, sendo ("id", "name", "xpath", "class_name", "css_selector", "link_text", "partial_link_text").</br>
 Exemplo de uso:</br>
-> `Espera = EsperarAparecerElemento(driver=driver)  #Instancia a classe, basta instanciar uma vez no codigo todo`
+> `Espera = EsperarAparecerElemento(driver=driver)  #Instancia a classe, basta instanciar uma vez no codigo todo`</br>
 > `Espera1 = Espera.find(Condicao="id", ElementoEsperar="lnk1", TempoMaxEspera=30)		#faz a busca de espera do elemento até o tempo indicado`
 
 
@@ -115,7 +115,7 @@ Exemplo de uso:</br>
 Espera o elemento não existir na pagina html.</br>
 Condicao: Padrão(id). Parametros de buscas, sendo ("id", "name", "xpath", "class_name", "css_selector", "link_text", "partial_link_text").</br>
 Exemplo de uso:</br>
-> `Desaparecer = EsperarDesaparecerElemento(driver=driver) 	#Instancia a classe, basta instanciar uma vez no codigo todo`
+> `Desaparecer = EsperarDesaparecerElemento(driver=driver) 	#Instancia a classe, basta instanciar uma vez no codigo todo`</br>
 > `Desaparecer1 = Desaparecer.find(Condicao="id", ElementoEsperar="lnk1", TempoMaxEspera=30)		#faz a busca se o elemento não existe, caso existe vai esperar até o tempo indicado para levantar um error.`
 
 
