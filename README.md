@@ -7,23 +7,34 @@
 &nbsp;
 &nbsp;
 
-*Õndices*
+*√çndices*
 &nbsp;
-- <a href="https://github.com/geniodev/VozTexto#voztexto" target="_self">Inicio</a>
-- <a href='https://github.com/geniodev/VozTexto#bibliotecas-instalar' target='_self'>Bibliotecas Install</a>
-- <a href='https://github.com/geniodev/VozTexto#documenta%C3%A7%C3%A3o---f%C3%B3rmulas' target='_self'>DocumentaÁ„o</a>
-  - <a href='https://github.com/geniodev/VozTexto#remove-acentos-das-strings-inseridas-no-txt' target='_self'>Remove acentos das strings inseridas no 'txt'</a>
-    - <a href='https://github.com/geniodev/VozTexto#remove-acentos-das-strings-inseridas-no-txt' target='_self'>remover_acentos(txt)</a>
-  - <a href='https://github.com/geniodev/VozTexto#ouvi-a-fala-de-voz-e-retorna-o-texto-sem-acentos' target='_self'>Ouvi a fala de voz e retorna o texto sem acentos</a>
-    - <a href='https://github.com/geniodev/VozTexto#ouvi-a-fala-de-voz-e-retorna-o-texto-sem-acentos' target='_self'>ListenWorkd()</a>
-  - <a href='https://github.com/geniodev/VozTexto#fala-a-hora-atual-e-minutos' target='_self'>Fala a hora Atual e minutos</a>
-    - <a href='https://github.com/geniodev/VozTexto#fala-a-hora-atual-e-minutos' target='_self'>Falarhora()</a>
-  - <a href='https://github.com/geniodev/VozTexto#voz-para-texto' target='_self'>Voz para Texto</a>
-    - <a href='https://github.com/geniodev/VozTexto#voz-para-texto' target='_self'>OuvirFala()</a>
-  - <a href='https://github.com/geniodev/VozTexto#texto-para-voz' target='_self'>Texto para Voz</a>
-    - <a href='https://github.com/geniodev/VozTexto#texto-para-voz' target='_self'>falag(falaragora)</a>
+- <a href="https://github.com/geniodev/SeleniumFaster#seleniumfaster" target="_self">Inicio</a>
+- <a href='https://github.com/geniodev/SeleniumFaster#bibliotecas-instalar' target='_self'>Bibliotecas Install</a>
+- <a href='https://github.com/geniodev/SeleniumFaster#documenta%C3%A7%C3%A3o---f%C3%B3rmulas' target='_self'>Documenta√ß√£o</a>
+  - <a href='https://github.com/geniodev/SeleniumFaster#faz-download-de-uma-imagem' target='_self'>Faz Download de uma imagem</a>
+    - <a href='https://github.com/geniodev/SeleniumFaster#faz-download-de-uma-imagem' target='_self'>BaixarImagem()</a>
 
+  - <a href='https://github.com/geniodev/SeleniumFaster#inicia-uma-instancia-do-navegador' target='_self'>Inicia uma instancia do navegador</a>
+    - <a href='https://github.com/geniodev/SeleniumFaster#inicia-uma-instancia-do-navegador' target='_self'>Navegador()</a>
 
+  - <a href='https://github.com/geniodev/SeleniumFaster#carrega-um-site' target='_self'>Carrega um site</a>
+    - <a href='https://github.com/geniodev/SeleniumFaster#carrega-um-site' target='_self'>Requisicao()</a>
+
+  - <a href='https://github.com/geniodev/SeleniumFaster#busca-de-elementos-no-driver-que-estejam-visiveis' target='_self'>Busca de Elementos Visiveis</a>
+    - <a href='https://github.com/geniodev/SeleniumFaster#busca-de-elementos-no-driver-que-estejam-visiveis' target='_self'>Find()</a>
+
+  - <a href='https://github.com/geniodev/SeleniumFaster#busca-e-opera-nos-elementos' target='_self'>Busca e Opera nos Elementos</a>
+    - <a href='https://github.com/geniodev/SeleniumFaster#busca-e-opera-nos-elementos' target='_self'>FindOperation()</a>
+
+  - <a href='https://github.com/geniodev/SeleniumFaster#espera-aparecer-elemento' target='_self'>Espera Aparecer Elemento</a>
+    - <a href='https://github.com/geniodev/SeleniumFaster#espera-aparecer-elemento' target='_self'>Espera.find()</a>
+
+  - <a href='https://github.com/geniodev/SeleniumFaster#espera-desaparecer-elemento' target='_self'>Espera Desaparecer Elemento</a>
+    - <a href='https://github.com/geniodev/SeleniumFaster#espera-desaparecer-elemento' target='_self'>Desaparecer.find()</a>
+
+  - <a href='https://github.com/geniodev/SeleniumFaster#monta-c%C3%B3digos-para-findelement' target='_self'>Monta C√≥digos para FindElement</a>
+    - <a href='https://github.com/geniodev/SeleniumFaster#monta-c%C3%B3digos-para-findelement' target='_self'>MontaCodigoSelenium()</a>
 
 
 
@@ -39,7 +50,7 @@ pip install *
 
 
 &nbsp;
-# DocumentaÁ„o - FÛrmulas:
+# Documenta√ß√£o - F√≥rmulas:
 
 #### Faz Download de uma imagem
 Exemplo 1:</br>
@@ -53,9 +64,9 @@ SalvarImg = BaixarImagem(Find=driver.find_element_by_css_selector("img#captcha-i
 
 #### Inicia uma instancia do navegador
 Navegador: "chrome", "firefox", "edge", "internet"/"internetexplorer"</br>
-Maximizar: Padr„o(True) > Maximiza a tela para preencher a tela inteira do navegador</br>
-Visivel: Padr„o(True) > Deixa visivel ou invisÌvel o navegador(n„o aparece no computador)</br>
-EsperaImplicita: Padr„o(False) > Quando "True" faz com que cada requisiÁ„o de "Find" seja executado no tempo de espera definido aqui com numero inteiro em segundos.</br>
+Maximizar: Padr√£o(True) > Maximiza a tela para preencher a tela inteira do navegador</br>
+Visivel: Padr√£o(True) > Deixa visivel ou invis√≠vel o navegador(n√£o aparece no computador)</br>
+EsperaImplicita: Padr√£o(False) > Quando "True" faz com que cada requisi√ß√£o de "Find" seja executado no tempo de espera definido aqui com numero inteiro em segundos.</br>
 > `Navegador( Navegador="chrome", Maximizar=True, Visivel=True, EsperaImplicita=False )`
 
 &nbsp;
@@ -63,34 +74,34 @@ EsperaImplicita: Padr„o(False) > Quando "True" faz com que cada requisiÁ„o de "F
 
 #### Carrega um site
 Site: deve acompanhar conter os HTTP/HTTPS antes "https://wwww.site.com.br"</br>
-TempoCarregamento: Padr„o(0) Padr„o leva o tempo que precisar. Tempo em int que levar· atÈ retornar um error.</br>
-Return_Html: Padr„o(False). "True" Retorna o Codigo HTML da requisiÁ„o realizada.</br>
-Return_Title: Padr„o(False). "True" Retorna o nome do Titulo da p·gina, util para verificar se acesso foi realizado com sucesso.</br>
+TempoCarregamento: Padr√£o(0) Padr√£o leva o tempo que precisar. Tempo em int que levar√° at√© retornar um error.</br>
+Return_Html: Padr√£o(False). "True" Retorna o Codigo HTML da requisi√ß√£o realizada.</br>
+Return_Title: Padr√£o(False). "True" Retorna o nome do Titulo da p√°gina, util para verificar se acesso foi realizado com sucesso.</br>
 > `Requisicao(Driver, Site="", Return_Url=False, TempoCarregamento=0, Return_Html=False, Return_Title=False )`
 
 &nbsp;
 
 
 #### Busca de Elementos no Driver que estejam visiveis
-Driver: driver j· iniciado do navegador.</br>
-FindParams: Padr„o(id). Parametros de buscas, sendo ("id", "name", "xpath", "class_name", "css_selector", "link_text", "partial_link_text"), pode ser passado numero de 0 ate 6 a ordem est· descrito nesta linha.</br>
-Find: O componente que ir· pesquisar que est·ra descrito no html, ex: "search", sera procura um id com nome "search".</br>
-TempoMaxEspera: Padr„o(0) tempo padr„o da biblioteca. Espera o tempo atÈ o valor indicado, podendo terminar antes o valor mencionado em segundos.</br>
-All: Padr„o(False). "True" > Faz buscas e retorna todos os elementos encontrados em uma lista de elementos selenium.</br>
+Driver: driver j√° iniciado do navegador.</br>
+FindParams: Padr√£o(id). Parametros de buscas, sendo ("id", "name", "xpath", "class_name", "css_selector", "link_text", "partial_link_text"), pode ser passado numero de 0 ate 6 a ordem est√° descrito nesta linha.</br>
+Find: O componente que ir√° pesquisar que est√°ra descrito no html, ex: "search", sera procura um id com nome "search".</br>
+TempoMaxEspera: Padr√£o(0) tempo padr√£o da biblioteca. Espera o tempo at√© o valor indicado, podendo terminar antes o valor mencionado em segundos.</br>
+All: Padr√£o(False). "True" > Faz buscas e retorna todos os elementos encontrados em uma lista de elementos selenium.</br>
 > `Find(Driver, FindParams= "id", Find="", TempoMaxEspera=0, All=False)`
 
 &nbsp;
 
 
 #### Busca e Opera nos Elementos
-Executa buscas de Elementos no Driver que estejam visiveis e procede com alguns recursos de interaÁ„o: clicar, limparcampo, digitar.</br>
-Driver: driver j· iniciado do navegador.</br>
-FindParams: Padr„o(id). Parametros de buscas, sendo ("id", "name", "xpath", "class_name", "css_selector", "link_text", "partial_link_text"), pode ser passado numero de 0 ate 6 a ordem est· descrito nesta linha.</br>
-Find: O componente que ir· pesquisar que est·ra descrito no html, ex: "search", sera procura um id com nome "search".</br>
-All: Padr„o(False). "True" > Faz buscas e retorna todos os elementos encontrados em uma lista de elementos selenium.</br>
-Click: Padr„o(False)."True" > Faz um clique no objeto procurado.</br>
-LimparCampo: Padr„o(False)."True" > Limpa o campo de textos, funciona igual o "innterHTML", dentro entre a tag de abertura e fechamento.</br>
-Digitar: Padr„o(False)."True" > Envia um texto digitado semelhante a um teclado para o elemento procurado.</br>
+Executa buscas de Elementos no Driver que estejam visiveis e procede com alguns recursos de intera√ß√£o: clicar, limparcampo, digitar.</br>
+Driver: driver j√° iniciado do navegador.</br>
+FindParams: Padr√£o(id). Parametros de buscas, sendo ("id", "name", "xpath", "class_name", "css_selector", "link_text", "partial_link_text"), pode ser passado numero de 0 ate 6 a ordem est√° descrito nesta linha.</br>
+Find: O componente que ir√° pesquisar que est√°ra descrito no html, ex: "search", sera procura um id com nome "search".</br>
+All: Padr√£o(False). "True" > Faz buscas e retorna todos os elementos encontrados em uma lista de elementos selenium.</br>
+Click: Padr√£o(False)."True" > Faz um clique no objeto procurado.</br>
+LimparCampo: Padr√£o(False)."True" > Limpa o campo de textos, funciona igual o "innterHTML", dentro entre a tag de abertura e fechamento.</br>
+Digitar: Padr√£o(False)."True" > Envia um texto digitado semelhante a um teclado para o elemento procurado.</br>
 > `FindOperation(Driver, FindParams="id", Find="", All=False, Click=False, LimparCampo=False, Digitar=False)`
 
 
@@ -100,10 +111,10 @@ Digitar: Padr„o(False)."True" > Envia um texto digitado semelhante a um teclado 
 
 #### Espera Aparecer Elemento
 Espera o elemento estar presente na pagina html.</br>
-Condicao: Padr„o(id). Parametros de buscas, sendo ("id", "name", "xpath", "class_name", "css_selector", "link_text", "partial_link_text").</br>
+Condicao: Padr√£o(id). Parametros de buscas, sendo ("id", "name", "xpath", "class_name", "css_selector", "link_text", "partial_link_text").</br>
 Exemplo de uso:</br>
 > `Espera = EsperarAparecerElemento(driver=driver)  #Instancia a classe, basta instanciar uma vez no codigo todo`</br>
-> `Espera1 = Espera.find(Condicao="id", ElementoEsperar="lnk1", TempoMaxEspera=30)		#faz a busca de espera do elemento atÈ o tempo indicado`
+> `Espera1 = Espera.find(Condicao="id", ElementoEsperar="lnk1", TempoMaxEspera=30)		#faz a busca de espera do elemento at√© o tempo indicado`
 
 
 
@@ -112,11 +123,11 @@ Exemplo de uso:</br>
 
 
 #### Espera Desaparecer Elemento
-Espera o elemento n„o existir na pagina html.</br>
-Condicao: Padr„o(id). Parametros de buscas, sendo ("id", "name", "xpath", "class_name", "css_selector", "link_text", "partial_link_text").</br>
+Espera o elemento n√£o existir na pagina html.</br>
+Condicao: Padr√£o(id). Parametros de buscas, sendo ("id", "name", "xpath", "class_name", "css_selector", "link_text", "partial_link_text").</br>
 Exemplo de uso:</br>
 > `Desaparecer = EsperarDesaparecerElemento(driver=driver) 	#Instancia a classe, basta instanciar uma vez no codigo todo`</br>
-> `Desaparecer1 = Desaparecer.find(Condicao="id", ElementoEsperar="lnk1", TempoMaxEspera=30)		#faz a busca se o elemento n„o existe, caso existe vai esperar atÈ o tempo indicado para levantar um error.`
+> `Desaparecer1 = Desaparecer.find(Condicao="id", ElementoEsperar="lnk1", TempoMaxEspera=30)		#faz a busca se o elemento n√£o existe, caso existe vai esperar at√© o tempo indicado para levantar um error.`
 
 
 
@@ -125,15 +136,15 @@ Exemplo de uso:</br>
 
 
 
-#### Monta CÛdigos para FindElement
-recebe o site atual no driver e transforma em uma lista de cÛdigos para usar como buscas find no selenium e tambÈm como busca em javascript interagido com selenium.</br>
-Driver: driver j· iniciado do navegador.</br>
-OnlySelenium: Padr„o(False), "True" traz somente cÛdigos criado somente para interaÁ„o selenium.</br>
-OnlyJScript: Padr„o(False), "True" traz somente cÛdigos criados para buscas em javascript interagindo como se executasse um script javascript.</br>
+#### Monta C√≥digos para FindElement
+recebe o site atual no driver e transforma em uma lista de c√≥digos para usar como buscas find no selenium e tamb√©m como busca em javascript interagido com selenium.</br>
+Driver: driver j√° iniciado do navegador.</br>
+OnlySelenium: Padr√£o(False), "True" traz somente c√≥digos criado somente para intera√ß√£o selenium.</br>
+OnlyJScript: Padr√£o(False), "True" traz somente c√≥digos criados para buscas em javascript interagindo como se executasse um script javascript.</br>
 > `MontaCodigoSelenium(Driver, OnlySelenium=False, OnlyJScript=False)`
 
 
 
 &nbsp;
 <h6 align="center">Desenvolvedor: RA (Ricardo Andrade)</h6>
-<h6 align="center">Vers„o: 5.0.0</h6>
+<h6 align="center">Vers√£o: 5.0.0</h6>
