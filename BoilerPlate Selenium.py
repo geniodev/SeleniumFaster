@@ -41,6 +41,10 @@ import io
 #Sistema
 import os
 
+#Operar Area de Transferencia
+import clipboard
+
+
 
 
 #Profile é uma pasta do navegador onde estarão os arquivos do chrome, onde você pode copiar o seu navegador e usar nele para ligar plug-ins e ferramentas
@@ -78,7 +82,7 @@ def Abrir_navegador(download_dir="", profile="", AutoDownloadFiles=True, Invisiv
     
     driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
     #driver.maximize_window()                            #Maximiza a janela do navegador
-    driver.implicitly_wait(60)      #Espera Implicita
+    driver.implicitly_wait(3)      #Espera Implicita
     driver.set_page_load_timeout(60)                    #Timeout de espera da pagina carregar.
     
     return driver
@@ -112,17 +116,15 @@ def Online():
 
 #Copia o que é pra digitar na memoria
 def Copiar(text):
-    command = 'echo ' + text.strip() + '| clip'
-    os.system(command)
-    
-    # Example
-    # Copiar('ricardo')
+    clipboard.copy(text)
+
 
 def Colar(objeto):
-    objeto.send_keys(Keys.CONTROL+ "v")
+    # objeto.send_keys(Keys.CONTROL+ "v")
+    clipboard.paste()
 
 
-#Objeto é realizado do find
+
 def Digitar(objeto, conteudo, limpar=True):
     try:
         
@@ -134,10 +136,8 @@ def Digitar(objeto, conteudo, limpar=True):
                 pass
             
         
-        command = 'echo ' + str(conteudo).strip() + '| clip'
-        os.system(command)
-        
-        objeto.send_keys( Keys.CONTROL+ "v" )
+        clipboard.copy(conteudo) #Copia conteudo para a área de Transferencia
+        clipboard.paste()
         return True
     except Exception:
         return False
@@ -152,6 +152,11 @@ def BaixarCaptcha(Find, NomePng="captchaSimples.png"):
         file.write(Find.screenshot_as_png)
 
 
+## -----------------------------------------------------------       Aplicação
+
+
+
+
 ## -----------------------------------------------------------       Uso Geral Especifico
 
 # Pagina
@@ -161,12 +166,12 @@ driver.title         #Retorna o Título da Página
 
 # Procurar Elementos -- Para Retornar uma Lista de todos encontrado, troque "element" por "elements"
 driver.find_element_by_id()
-driver. find_element_by_class_name()
+driver.find_element_by_class_name()
 driver.find_element_by_css_selector()
 driver.find_element_by_xpath()
-driver. find_element_by_name()
-driver. find_element_by_link_text()
-driver. find_element_by_partial_link_text()
+driver.find_element_by_name()
+driver.find_element_by_link_text()
+driver.find_element_by_partial_link_text()
 
 ## Com Espera de tempo máximo de 60 segundos
 WebDriverWait(driver, 60).until(visibility_of_element_located( driver.find_element_by_css_selector( "body div[name|='usuario']" ) ))   #Elementos Visiveis
@@ -219,6 +224,7 @@ driver.switch_to.window(driver.window_handles[0])
 driver.close()
 driver.switch_to.window(driver.window_handles[0])
 driver.switch_to.default_content()     #Volta ao Frame Padrão
+
 
 #Trocar para Alerta Alerta
 alert = browser.switch_to.alert
@@ -309,7 +315,6 @@ actions = ActionChains(driver)
 actions.drag_and_drop(source, target)
 # Executamos as acoes.
 actions.perform()
-actions.
 
 
 
@@ -331,6 +336,30 @@ actions.
 # ---------------------------    Operação
 
 # Exemplo
+
+
+
+
+driver = Abrir_navegador(download_dir="", profile="dev", AutoDownloadFiles=True, Invisivel=False )
+
+
+
+
+
+#Trocar de Iframe
+driver.switch_to.frame("SelectorsHub")  #Nome do Iframe
+driver.switch_to.default_content()     #Volta ao Frame Padrão
+driver.switch_to.frame(2)       #Selecionando o Frame por Número
+driver.switch_to.frame(driver.find_element_by_tag_name("iframe")[1])       #Selecionando Iframe por busca de "Find"
+
+
+driver.switch_to.frame(0)       #Selecionando o Frame por Número
+
+driver.switch_to.frame(driver.find_element_by_tag_name("SelectorsHub")[0])
+
+
+Fechar_navegador(driver) #Fecha Navegador
+
 
 
 # =============================================================================
